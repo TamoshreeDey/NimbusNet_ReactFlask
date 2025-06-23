@@ -1,5 +1,5 @@
 # NimbusNet_ReactFlask
-# <div align="center"><img src="../public/nimbusnet-icon.svg" alt="NIMBUSNET Logo" width="64" height="64"/> NIMBUSNET</div>
+# <div align="center"><img src="Frontend/cloud-ui/public/nimbusnet_icon.svg" alt="NIMBUSNET Logo" width="64" height="64"/> NIMBUSNET</div>
 
 <div align="center">
   <h3>☁️ Next-Generation Cloud Network Platform ☁️</h3>

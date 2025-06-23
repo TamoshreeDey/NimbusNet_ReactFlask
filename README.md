@@ -19,7 +19,7 @@
 
 </div>
 
-**NIMBUSNET** is an advanced AI-powered platform for cloud network analytics and prediction. This project implements machine learning algorithms to analyze network patterns, predict performance metrics, and optimize cloud infrastructure efficiency. It is our College Project and I volunteered the making of the ML model also made this entire app.
+**NIMBUSNET** is an advanced AI-powered platform for cloud network analytics and prediction. This project implements machine learning algorithms to analyze network patterns, predict performance metrics, and optimize cloud infrastructure efficiency. It is our College Project and I with the help of one of my team mate made the ML model under the guidance of our supervisor and I also built this app on my own. It's my first full stack project.
 
 ### 🧠 **AI Model & Accuracy**
 

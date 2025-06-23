@@ -1,5 +1,5 @@
 # NimbusNet_ReactFlask
-# <div align="center"><img src="./public/nimbusnet_icon.svg" alt="NIMBUSNET Logo" width="64" height="64"/> NIMBUSNET</div>
+# <div align="center"><img src="Frontend/cloud-ui/public/nimbusnet_icon.svg" alt="NIMBUSNET Logo" width="64" height="64"/> NIMBUSNET</div>
 
 <div align="center">
   <h3>☁️ AI-Powered Cloud Network Analytics Platform ☁️</h3>
@@ -28,11 +28,11 @@
 <td width="50%">
 
 #### 📊 **Model Performance**
-- **Accuracy Achieved:** `95.2%`
-- **Model Type:** Neural Network
-- **Training Dataset:** 10,000+ network samples
+- **Accuracy Achieved:** `99%`
+- **Model Type:** BAM-CNN
+- **Training Dataset:** 2500 approx
 - **Validation Method:** Cross-validation
-- **Prediction Speed:** Real-time (<100ms)
+
 
 </td>
 <td width="50%">
@@ -88,11 +88,9 @@
 <td width="50%">
 
 #### 🔬 **Model Architecture**
-- **Type:** Deep Neural Network
-- **Layers:** 5 hidden layers
-- **Neurons:** 128-64-32-16-8 configuration
-- **Activation:** ReLU + Softmax output
-- **Optimizer:** Adam with learning rate 0.001
+- **Type:** BAM-CNN
+- **Activation:** Mish + Softmax output
+- **Optimizer:** Adam 
 
 #### 📈 **Training Results**
 - **Training Accuracy:** 94%

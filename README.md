@@ -127,7 +127,7 @@
 
 ### Custom designed icon representing AI-powered cloud networking
 
-<img src="./public/nimbusnet-icon.svg" alt="NIMBUSNET Icon" width="128" height="128"/>
+<img src="Frontend/cloud-ui/public/nimbusnet_icon.svg" alt="NIMBUSNET Icon" width="128" height="128"/>
 
 **Design Elements:**
 - 🎨 **Gradient Cloud** - Represents cloud computing infrastructure

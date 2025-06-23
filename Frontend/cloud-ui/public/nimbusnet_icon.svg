@@ -1,0 +1,57 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for cloud -->
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for network nodes -->
+    <radialGradient id="nodeGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00f5ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0084ff;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Glow effect - ENHANCED -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle for depth -->
+  <circle cx="32" cy="32" r="30" fill="url(#cloudGradient)" opacity="0.1"/>
+  
+  <!-- Main cloud with beautiful gradient - BIGGER -->
+  <path d="M47 27C47 18.1634 39.8366 11 31 11C24.3726 11 18.7265 15.6343 17.254 21.8734C13.6658 22.5962 11 25.5686 11 29.2222C11 33.5186 14.4815 37 18.7778 37H45.2222C49.5186 37 53 33.5186 53 29.2222C53 25.5686 50.3342 22.5962 46.746 21.8734C46.746 21.8734 47 27 47 27Z" fill="url(#cloudGradient)" filter="url(#glow)" stroke="url(#cloudGradient)" stroke-width="1"/>
+  
+  <!-- Network mesh with glowing effect - BIGGER -->
+  <g filter="url(#glow)">
+    <!-- Primary nodes - MUCH BIGGER -->
+    <circle cx="14" cy="44" r="5" fill="url(#nodeGradient)" stroke="#00f5ff" stroke-width="1"/>
+    <circle cx="32" cy="52" r="5" fill="url(#nodeGradient)" stroke="#00f5ff" stroke-width="1"/>
+    <circle cx="50" cy="44" r="5" fill="url(#nodeGradient)" stroke="#00f5ff" stroke-width="1"/>
+    
+    <!-- Secondary nodes - BIGGER -->
+    <circle cx="24" cy="48" r="3" fill="#00d4ff" opacity="0.9" stroke="#00f5ff" stroke-width="0.5"/>
+    <circle cx="40" cy="48" r="3" fill="#00d4ff" opacity="0.9" stroke="#00f5ff" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Animated connection lines - THICKER -->
+  <g opacity="0.8">
+    <line x1="19" y1="44" x2="27" y2="52" stroke="url(#nodeGradient)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="37" y1="52" x2="45" y2="44" stroke="url(#nodeGradient)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="14" y1="44" x2="24" y2="48" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="40" y1="48" x2="50" y2="44" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="24" y1="48" x2="40" y2="48" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Connection from cloud to network - THICKER -->
+  <line x1="32" y1="37" x2="32" y2="47" stroke="url(#cloudGradient)" stroke-width="3" stroke-dasharray="4,3" opacity="0.9" stroke-linecap="round"/>
+  
+  <!-- Subtle highlight on cloud - BIGGER -->
+  <ellipse cx="26" cy="24" rx="6" ry="3" fill="white" opacity="0.4"/>
+</svg>

@@ -29,21 +29,27 @@ def get_history(collection, from_date=None, to_date=None):
         query = {}
 
         if from_date or to_date:
-            query['timestamp'] = {}
+            query["timestamp"] = {}
             if from_date:
-                query['timestamp']['$gte'] = datetime.strptime(from_date, "%Y-%m-%d")
+                from_dt = datetime.strptime(from_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                query["timestamp"]["$gte"] = from_dt
             if to_date:
-                query['timestamp']['$lte'] = datetime.strptime(to_date, "%Y-%m-%d")
-        else:
-            # Default: last 10 days
-            ten_days_ago = datetime.now() - timedelta(days=10)
-            query['timestamp'] = {"$gte": ten_days_ago}
+                # include the whole day by adding 1 day and using $lt
+                to_dt = datetime.strptime(to_date, "%Y-%m-%d") + timedelta(days=1)
+                to_dt = to_dt.replace(tzinfo=timezone.utc)
+                query["timestamp"]["$lt"] = to_dt
 
-        cursor = collection.find(query).sort("timestamp", -1)
+            cursor = collection.find(query).sort("timestamp", -1)
+        else:
+            # Default: return latest 3 records if no date range is specified
+            cursor = collection.find().sort("timestamp", -1).limit(3)
+
         results = []
         for doc in cursor:
             doc["_id"] = str(doc["_id"])  # Convert ObjectId to string
+            doc["timestamp"] = doc["timestamp"].strftime('%a, %d %b %Y %H:%M:%S GMT')  # Optional readable format
             results.append(doc)
+
         return results
 
     except Exception as e:
